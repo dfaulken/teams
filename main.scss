@@ -19,6 +19,9 @@ body{
     .container{
       padding: 0.75em;
     }
+    &.lead-missing::after{
+      content: 'Missing lead'
+    }
   }
 
   .programmer{
@@ -39,7 +42,7 @@ body{
         margin: auto auto;
       }
     }
-    &.in-training{
+    &.trainee{
       background: #ef9d2a;
     }
   }

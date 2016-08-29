@@ -14,6 +14,8 @@ body {
       text-align: center; }
     body .team .container {
       padding: 0.75em; }
+    body .team.lead-missing::after {
+      content: "Missing lead"; }
   body .programmer {
     background: #f6c684;
     border: 3px solid #a7660c;
@@ -30,7 +32,7 @@ body {
         font-size: 20px;
         font-weight: bold;
         margin: auto auto; }
-    body .programmer.in-training {
+    body .programmer.trainee {
       background: #ef9d2a; }
 
 /*# sourceMappingURL=main.css.map */
