@@ -1,26 +1,33 @@
-body {
+body{
   background: #66a9f0;
   font-size: 36px;
-  font-family: sans-serif; }
-  body .team {
+  font-family: sans-serif;
+  
+  .team{
     background: #b5c8de;
     border: 10px solid grey;
     border-radius: 12px;
-    margin: 2em 25%; }
-    body .team .name {
+    margin: 2em 25%;
+
+    .name{
       background: #bababa;
       border-bottom: 2px solid grey;
       padding: 5px;
-      text-align: center; }
-    body .team .container {
-      padding: 0.75em; }
-  body .programmer {
+      text-align: center;
+    }
+
+    .container{
+      padding: 0.75em;
+    }
+  }
+
+  .programmer{
     background: #f6c683;
     border: 3px solid #a7660c;
     border-radius: 12px;
     display: flex;
     margin: 5px auto;
     padding: 5px;
-    width: 200px; }
-
-/*# sourceMappingURL=main.css.map */
+    width: 200px;
+  }
+}
