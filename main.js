@@ -8,10 +8,11 @@ $(document).ready(function(){
       }).map(function(){ 
         return $(this).attr('class').split(' ');
       });
-      $(this).toggleClass('lead-missing', count(programmers, 'lead') < 1);
-      $(this).toggleClass('lead-surplus', count(programmers, 'lead') > 1);
-      $(this).toggleClass('trainee-missing', count(programmers, 'trainee') < 1);
-      $(this).toggleClass('trainee-surplus', count(programmers, 'trainee') > 1);
+      var warnings = $(this).find('.warnings');
+      warnings.toggleClass('lead-missing', count(programmers, 'lead') < 1);
+      warnings.toggleClass('lead-surplus', count(programmers, 'lead') > 1);
+      warnings.toggleClass('trainee-missing', count(programmers, 'trainee') < 1);
+      warnings.toggleClass('trainee-surplus', count(programmers, 'trainee') > 1);
     });
   }
 
