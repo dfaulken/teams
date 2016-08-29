@@ -4,7 +4,7 @@ $(document).ready(function(){
     $('.team').each(function(){
       var teamName = $(this).data('name');
       var programmers = $('.programmer').filter(function(){
-        return $(this).data('teamName') == teamName;
+        return $(this).data('teamName') === teamName;
       }).map(function(){ 
         return $(this).attr('class').split(' ');
       });
@@ -40,10 +40,10 @@ $(document).ready(function(){
     checkTeams();
   }
 
-  $('.programmer:not(.fixed)').draggable()
-  $('.programmer.fixed').each(setProgrammerTeam).click(function(){
-    alert('Sorry! This programmer likes where they are and is fixed in place.');
-  });
+  $('.programmer:not(.fixed)').draggable();
+  $('.programmer.fixed').draggable({ containment: 'parent' }).dblclick(function(){
+    alert("This programmer's status and team association are fixed.");
+  }).each(setProgrammerTeam);
   $('.programmer:not(.in-training,.fixed)').dblclick(toggleLead);
   $('.team .container').droppable({ drop: programmerDropped });
   checkTeams();
