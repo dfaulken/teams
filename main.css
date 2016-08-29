@@ -13,20 +13,25 @@ body {
       padding: 5px;
       text-align: center; }
     body .team .container {
+      height: 100px;
       padding: 0.75em; }
     body .team .warnings {
       background: #e2b1b1;
       border-top: 2px solid grey;
       padding: 5px;
       text-align: center; }
-      body .team .warnings:not(.lead-missing):not(.lead-surplus):not(.trainee-missing):not(.trainee-surplus) {
-        display: none; }
+      body .team .warnings:not(.trainee-missing):not(.trainee-surplus):not(.lead-missing):not(.lead-surplus) {
+        background: #b2e4b1; }
+        body .team .warnings:not(.trainee-missing):not(.trainee-surplus):not(.lead-missing):not(.lead-surplus)::after {
+          content: "OK"; }
+      body .team .warnings.trainee-missing::after {
+        content: "Missing trainee"; }
+      body .team .warnings.trainee-surplus::after {
+        content: "Too many trainees"; }
       body .team .warnings.lead-missing::after {
         content: "Missing lead"; }
       body .team .warnings.lead-surplus::after {
         content: "Too many leads"; }
-      body .team .warnings.trainee-missing::after {
-        content: "Missing trainee"; }
   body .programmer {
     background: #f6c684;
     border: 3px solid #a7660c;
@@ -45,5 +50,11 @@ body {
         margin: auto auto; }
     body .programmer.trainee {
       background: #ef9d2a; }
+      body .programmer.trainee::after {
+        content: 'TRAINEE';
+        color: #777;
+        font-size: 20px;
+        font-weight: bold;
+        margin: auto auto; }
 
 /*# sourceMappingURL=main.css.map */

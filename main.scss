@@ -17,16 +17,19 @@ body{
     }
 
     .container{
+      height: 100px;
       padding: 0.75em;
     }
 
     .warnings{
-      &:not(.lead-missing):not(.lead-surplus):not(.trainee-missing):not(.trainee-surplus){
-        display: none;
+      &:not(.trainee-missing):not(.trainee-surplus):not(.lead-missing):not(.lead-surplus){
+        background: #b2e4b1;
+        &::after{ content: 'OK' }
       }
+      &.trainee-missing::after{ content: 'Missing trainee' }
+      &.trainee-surplus::after{ content: 'Too many trainees' }
       &.lead-missing::after{ content: 'Missing lead' }
       &.lead-surplus::after{ content: 'Too many leads' }
-      &.trainee-missing::after{ content: 'Missing trainee' }
 
       background: #e2b1b1;
       border-top: 2px solid grey;
@@ -55,6 +58,13 @@ body{
     }
     &.trainee{
       background: #ef9d2a;
+      &::after{
+        content: 'TRAINEE';
+        color: #777;
+        font-size: 20px;
+        font-weight: bold;
+        margin: auto auto;
+      }
     }
   }
 }
