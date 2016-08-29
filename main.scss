@@ -22,12 +22,25 @@ body{
   }
 
   .programmer{
-    background: #f6c683;
+    background: #f6c684;
     border: 3px solid #a7660c;
     border-radius: 12px;
     display: flex;
     margin: 5px auto;
     padding: 5px;
     width: 200px;
+    &.lead{
+      background: #fbe9d0;
+      &::after{
+        content: 'LEAD';
+        color: #777;
+        font-size: 20px;
+        font-weight: bold;
+        margin: auto auto;
+      }
+    }
+    &.in-training{
+      background: #ef9d2a;
+    }
   }
 }
