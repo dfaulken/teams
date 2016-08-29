@@ -36,14 +36,12 @@ body {
     background: #f6c684;
     border: 3px solid #a7660c;
     border-radius: 12px;
-    display: flex;
-    margin: 5px auto;
-    padding: 5px;
-    width: 200px; }
+    display: inline;
+    padding: 5px; }
     body .programmer.lead {
       background: #fbe9d0; }
       body .programmer.lead::after {
-        content: 'LEAD';
+        content: ' LEAD';
         color: #777;
         font-size: 20px;
         font-weight: bold;
@@ -51,7 +49,7 @@ body {
     body .programmer.trainee {
       background: #ef9d2a; }
       body .programmer.trainee::after {
-        content: 'TRAINEE';
+        content: ' TRAINEE';
         color: #777;
         font-size: 20px;
         font-weight: bold;
