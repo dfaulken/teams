@@ -47,4 +47,6 @@ $(document).ready(function(){
   $('.programmer:not(.in-training,.fixed)').dblclick(toggleLead);
   $('.team .container').droppable({ drop: programmerDropped });
   checkTeams();
+}).dblclick(function(e){
+  if(e.target.localName === 'body') e.target.webkitRequestFullscreen();
 });
