@@ -41,19 +41,19 @@ body {
     body .programmer.lead {
       background: #fbe9d0; }
       body .programmer.lead::after {
-        content: ' LEAD';
+        content: '  LEAD';
         color: #777;
         font-size: 20px;
         font-weight: bold;
-        margin: auto auto; }
+        margin: 0 auto; }
     body .programmer.trainee {
       background: #ef9d2a; }
       body .programmer.trainee::after {
-        content: ' TRAINEE';
+        content: '  TRAINEE';
         color: #777;
         font-size: 20px;
         font-weight: bold;
-        margin: auto auto; }
+        margin: 0 auto; }
   body .explanation {
     font-size: 18px;
     margin-top: 2em;

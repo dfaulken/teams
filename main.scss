@@ -47,21 +47,21 @@ body{
     &.lead{
       background: #fbe9d0;
       &::after{
-        content: ' LEAD';
+        content: '  LEAD';
         color: #777;
         font-size: 20px;
         font-weight: bold;
-        margin: auto auto;
+        margin: 0 auto;
       }
     }
     &.trainee{
       background: #ef9d2a;
       &::after{
-        content: ' TRAINEE';
+        content: '  TRAINEE';
         color: #777;
         font-size: 20px;
         font-weight: bold;
-        margin: auto auto;
+        margin: 0 auto;
       }
     }
   }

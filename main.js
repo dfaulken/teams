@@ -40,8 +40,9 @@ $(document).ready(function(){
     checkTeams();
   }
 
-  $('.programmer').draggable().each(setProgrammerTeam);
-  $('.programmer:not(.in-training)').dblclick(toggleLead);
+  $('.programmer:not(.fixed)').draggable()
+  $('.programmer.fixed').each(setProgrammerTeam);
+  $('.programmer:not(.in-training,.fixed)').dblclick(toggleLead);
   $('.team .container').droppable({ drop: programmerDropped });
   checkTeams();
 });
