@@ -41,7 +41,9 @@ $(document).ready(function(){
   }
 
   $('.programmer:not(.fixed)').draggable()
-  $('.programmer.fixed').each(setProgrammerTeam);
+  $('.programmer.fixed').each(setProgrammerTeam).click(function(){
+    alert('Sorry! This programmer likes where they are and is fixed in place.');
+  });
   $('.programmer:not(.in-training,.fixed)').dblclick(toggleLead);
   $('.team .container').droppable({ drop: programmerDropped });
   checkTeams();
