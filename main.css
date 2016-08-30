@@ -40,6 +40,10 @@ body {
         text-align: center; }
         body .main-container .team .warnings:not(.trainee-missing):not(.trainee-surplus):not(.lead-missing):not(.lead-surplus) {
           background: #b2e4b1; }
+          body .main-container .team .warnings:not(.trainee-missing):not(.trainee-surplus):not(.lead-missing):not(.lead-surplus) .no-warnings {
+            display: inline; }
+        body .main-container .team .warnings .no-warnings {
+          display: none; }
         body .main-container .team .warnings .warning {
           background: #c5aaaa;
           border: 2px solid #a67d7d;

@@ -38,6 +38,7 @@ body{
       .warnings{
         &:not(.trainee-missing):not(.trainee-surplus):not(.lead-missing):not(.lead-surplus){
           background: #b2e4b1;
+          .no-warnings{ display: inline; }
         }
 
         background: #e2b1b1;
@@ -46,6 +47,7 @@ body{
         border-top: 2px solid grey;
         padding: 5px;
         text-align: center;
+        .no-warnings{ display: none; }
         .warning{
           background: #c5aaaa;
           border: 2px solid #a67d7d;
