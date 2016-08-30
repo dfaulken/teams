@@ -27,6 +27,8 @@ body{
       .name{
         background: #bababa;
         border-bottom: 2px solid grey;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
         padding: 5px;
         text-align: center;
       }
@@ -50,6 +52,8 @@ body{
         &.lead-surplus::after{ content: 'Too many leads' }
 
         background: #e2b1b1;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
         border-top: 2px solid grey;
         padding: 5px;
         text-align: center;
