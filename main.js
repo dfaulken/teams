@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   function checkTeams(){
     $('.team').each(function(){
-      var teamName = $(this).data('name');
+      var teamName = $(this).find('.name').text();
       var programmers = $('.programmer').filter(function(){
         return $(this).data('teamName') === teamName;
       }).map(function(){ 
@@ -24,14 +24,14 @@ $(document).ready(function(){
   }
 
   function programmerDropped(event, ui){
-    var teamName = $(this).parent().data('name');
+    var teamName = $(this).siblings('.name').text();
     var programmer = ui.draggable;
     programmer.data('team-name', teamName);
     checkTeams();
   }
 
   function setProgrammerTeam(){
-    var teamName = $(this).parents('.team').data('name');
+    var teamName = $(this).parents('.team').find('.name').text();
     $(this).data('team-name', teamName);
   }
 
