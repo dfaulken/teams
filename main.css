@@ -40,16 +40,22 @@ body {
         text-align: center; }
         body .main-container .team .warnings:not(.trainee-missing):not(.trainee-surplus):not(.lead-missing):not(.lead-surplus) {
           background: #b2e4b1; }
-          body .main-container .team .warnings:not(.trainee-missing):not(.trainee-surplus):not(.lead-missing):not(.lead-surplus)::after {
-            content: "OK"; }
-        body .main-container .team .warnings.trainee-missing::after {
-          content: "Missing trainee"; }
-        body .main-container .team .warnings.trainee-surplus::after {
-          content: "Too many trainees"; }
-        body .main-container .team .warnings.lead-missing::after {
-          content: "Missing lead"; }
-        body .main-container .team .warnings.lead-surplus::after {
-          content: "Too many leads"; }
+        body .main-container .team .warnings .warning {
+          background: #c5aaaa;
+          border: 2px solid #a67d7d;
+          border-radius: 12px;
+          display: none;
+          padding: 2px 1em;
+          margin: 0 1em;
+          text-align: center; }
+        body .main-container .team .warnings.lead-missing .warning.lead-missing {
+          display: inline; }
+        body .main-container .team .warnings.lead-surplus .warning.lead-surplus {
+          display: inline; }
+        body .main-container .team .warnings.trainee-missing .warning.trainee-missing {
+          display: inline; }
+        body .main-container .team .warnings.trainee-surplus .warning.trainee-surplus {
+          display: inline; }
     body .main-container .programmer {
       background: #f6c684;
       border: 3px solid #a7660c;

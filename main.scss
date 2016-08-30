@@ -3,27 +3,23 @@ body{
   background: linear-gradient(to bottom, #9ab9db, #66a9f0);
   font-size: 20px;
   font-family: sans-serif;
-
   .main-container{
     background: #dcd3c7;
     border: 5px solid grey;
     border-radius: 20px;
     margin: 1em 10%;
     padding: 10px 10%;
-
     .text{
       display: block;
       font-size: 15px;
       margin-top: 2em;
       text-align: center;
     }
-    
     .team{
       background: #b5c8de;
       border: 5px solid grey;
       border-radius: 12px;
       margin: 1em auto;
-
       .name{
         background: #bababa;
         border-bottom: 2px solid grey;
@@ -32,7 +28,6 @@ body{
         padding: 5px;
         text-align: center;
       }
-
       .container{
         height: 100px;
         .programmer.fixed{
@@ -40,16 +35,10 @@ body{
           margin-left: 10px;
         }
       }
-
       .warnings{
         &:not(.trainee-missing):not(.trainee-surplus):not(.lead-missing):not(.lead-surplus){
           background: #b2e4b1;
-          &::after{ content: 'OK' }
         }
-        &.trainee-missing::after{ content: 'Missing trainee' }
-        &.trainee-surplus::after{ content: 'Too many trainees' }
-        &.lead-missing::after{ content: 'Missing lead' }
-        &.lead-surplus::after{ content: 'Too many leads' }
 
         background: #e2b1b1;
         border-bottom-left-radius: 6px;
@@ -57,9 +46,21 @@ body{
         border-top: 2px solid grey;
         padding: 5px;
         text-align: center;
+        .warning{
+          background: #c5aaaa;
+          border: 2px solid #a67d7d;
+          border-radius: 12px;
+          display: none;
+          padding: 2px 1em;
+          margin: 0 1em;
+          text-align: center;
+        }
+        &.lead-missing .warning.lead-missing{ display: inline; }
+        &.lead-surplus .warning.lead-surplus{ display: inline; }
+        &.trainee-missing .warning.trainee-missing{ display: inline; }
+        &.trainee-surplus .warning.trainee-surplus{ display: inline; }
       }
     }
-
     .programmer{
       background: #f6c684;
       border: 3px solid #a7660c;
